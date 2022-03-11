@@ -1,0 +1,5 @@
+object IsPrime extends App{
+
+
+
+}

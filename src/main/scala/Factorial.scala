@@ -11,5 +11,18 @@ object Factorial extends App{
     factHelper(n, 1)
   }
 
-  println(factorial(50))
+
+  println(factorial(6))
+
+  def factorialAnotherSimilarApproach(n: Int): Int = {
+    @tailrec
+    def factorialTailrec(num: Int, accumulator: Int): Int = {
+      if (num > n) accumulator
+      else factorialTailrec(num+1, accumulator * num)
+    }
+
+    factorialTailrec(1,1)
+  }
+
+  println(factorialAnotherSimilarApproach(6))
 }
